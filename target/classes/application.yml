@@ -1,0 +1,56 @@
+#server.port=8081  #修改内嵌tomcat服务器端口,公共的配置放到
+#application.yml中，不同环境的配置放大-dev和-prod中，比如数据库连接，port等。
+#context-path=/ems #添加项目名的方式已经被废弃
+server:
+  servlet:
+    context-path: /ems
+#  jsp-servlet:
+#    init-parameters:
+#        development: true #jsp开发模式部署 支持热部署
+
+spring:
+  profiles:
+    active: dev
+  mvc:
+    view:
+      prefix: / #配置前缀为根
+      suffix: .jsp #配置后缀
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: 123456
+ # thymeleaf: #因为下面这些thymeleaf配置都是springboot支持的thymeleaf默认的配置，所以也可以不做配置，但是要知道配置代表的意思。
+ #   prefix: classpath:/templates/
+ #   suffix: .html
+ #   cache: false
+ #   encoding: utf-8
+ #   servlet:
+ #     content-type: text/html
+  resources:
+    static-locations: classpath:/templates/,classpath/static/
+
+
+
+mybatis:
+  mapper-locations: classpath:com/test/mapper/*.xml
+  type-aliases-package: com.test.springboot.entity #别名 同样为 类名或者是类名首字母小些 User｜user
+
+name: xiaohei
+age: 32
+price: 32.03
+qqs: xiaohei,xiaobai
+id: 1
+bir: 20200728
+
+user:
+  id: 21
+  name: xiaozhu
+  age: 30
+  bir: 2020/07/28
+  map:
+    aa: xiaohei
+    bb: xiaobai
+
+

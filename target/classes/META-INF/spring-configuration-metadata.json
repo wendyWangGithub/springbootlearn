@@ -1,0 +1,37 @@
+{
+  "groups": [
+    {
+      "name": "user",
+      "type": "com.test.springboot.entity.User",
+      "sourceType": "com.test.springboot.entity.User"
+    }
+  ],
+  "properties": [
+    {
+      "name": "user.age",
+      "type": "java.lang.Integer",
+      "sourceType": "com.test.springboot.entity.User"
+    },
+    {
+      "name": "user.bir",
+      "type": "java.util.Date",
+      "sourceType": "com.test.springboot.entity.User"
+    },
+    {
+      "name": "user.id",
+      "type": "java.lang.String",
+      "sourceType": "com.test.springboot.entity.User"
+    },
+    {
+      "name": "user.map",
+      "type": "java.util.Map<java.lang.String,java.lang.String>",
+      "sourceType": "com.test.springboot.entity.User"
+    },
+    {
+      "name": "user.name",
+      "type": "java.lang.String",
+      "sourceType": "com.test.springboot.entity.User"
+    }
+  ],
+  "hints": []
+}
