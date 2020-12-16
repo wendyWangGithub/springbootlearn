@@ -25,7 +25,6 @@ import java.util.List;
 //@GetMapping，限定请求方式只能是get，并指定路径，一般用在方法上，@POSTMapping，@DeleteMapping，@PutMapping同@GetMapping
 public class HelloController {
 
-    System.out.println("远程合并代码");
     @Value("${name}")//通过工厂去管理name，给name注入值，基本属性注入值。
     private String name;
     @Value("${server.port}")//想把port
@@ -60,6 +59,7 @@ public class HelloController {
     @RequestMapping("hello")
     //@ResponseBody //将Controller返回的Java对象自动转换成json或者xml，使用springboot不需要引入maven 的json
     public String hello() {
+        System.out.println("远程合并代码");
         helloService.hello("springboot");
         System.out.println("姓名:" + name);
         System.out.println("端口:" + port);
