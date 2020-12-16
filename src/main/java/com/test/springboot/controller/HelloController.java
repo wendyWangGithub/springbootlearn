@@ -59,6 +59,7 @@ public class HelloController {
     @RequestMapping("hello")
     //@ResponseBody //将Controller返回的Java对象自动转换成json或者xml，使用springboot不需要引入maven 的json
     public String hello() {
+        System.out.println("branch wwr");
         helloService.hello("springboot");
         System.out.println("姓名:" + name);
         System.out.println("端口:" + port);
