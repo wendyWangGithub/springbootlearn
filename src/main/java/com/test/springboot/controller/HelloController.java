@@ -1,5 +1,6 @@
 package com.test.springboot.controller;
 
+import com.alibaba.druid.support.json.JSONUtils;
 import com.test.springboot.entity.User;
 import com.test.springboot.service.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +26,6 @@ import java.util.List;
 //@GetMapping，限定请求方式只能是get，并指定路径，一般用在方法上，@POSTMapping，@DeleteMapping，@PutMapping同@GetMapping
 public class HelloController {
 
-    System.out.println("远程合并代码");
     @Value("${name}")//通过工厂去管理name，给name注入值，基本属性注入值。
     private String name;
     @Value("${server.port}")//想把port
