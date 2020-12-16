@@ -1,6 +1,5 @@
 package com.test.springboot.controller;
 
-import com.alibaba.druid.support.json.JSONUtils;
 import com.test.springboot.entity.User;
 import com.test.springboot.service.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +24,7 @@ import java.util.List;
 //用来加入访问路径，可以用在类上或方法上。
 //@GetMapping，限定请求方式只能是get，并指定路径，一般用在方法上，@POSTMapping，@DeleteMapping，@PutMapping同@GetMapping
 public class HelloController {
+
 
     @Value("${name}")//通过工厂去管理name，给name注入值，基本属性注入值。
     private String name;
@@ -61,6 +61,7 @@ public class HelloController {
     //@ResponseBody //将Controller返回的Java对象自动转换成json或者xml，使用springboot不需要引入maven 的json
     public String hello() {
         System.out.println("本地合并代码");
+        System.out.println("远程合并代码");
         helloService.hello("springboot");
         System.out.println("姓名:" + name);
         System.out.println("端口:" + port);
